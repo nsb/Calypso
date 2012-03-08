@@ -1,0 +1,14 @@
+
+# put the correct release numbers in VERSION file
+. ./VERSION
+
+VERSION=${MAJVERSION}.${MINVERSION}-${RELEASE}
+
+rm -rf kommute rpm pkg
+
+CURDIR=`pwd`
+
+# make archlinux package
+sed "s/RELEASE/${MAJVERSION}.${MINVERSION}/" PKGBUILD.rel >PKGBUILD
+makepkg -f -p PKGBUILD
+

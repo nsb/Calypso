@@ -1,0 +1,29 @@
+.QWidget {
+   background-color: #c4dafa;
+}
+
+QFileMenu{
+   background-color: #c4dafa;
+}
+
+QMenuBar {
+   background-color: #c4dafa;
+
+}
+
+/* Customize the toolbar. */
+QToolBar {
+    border-image: url(:qss/blue/blue.png);
+
+}
+
+/* Customize the toolbar. */
+QStatusBar {
+    border-image: url(:qss/blue/blue.png);
+
+}
+
+
+
+
+

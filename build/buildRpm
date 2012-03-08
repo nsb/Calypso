@@ -1,0 +1,42 @@
+
+# put the correct release numbers in VERSION file
+. ./VERSION
+
+VERSION=${MAJVERSION}.${MINVERSION}-${RELEASE}
+
+rm -rf kommute rpm pkg src
+
+CURDIR=`pwd`
+
+svntrunk=https://kommute.svn.sourceforge.net/svnroot/kommute/branches/rel_${MAJVERSION}.${MINVERSION}
+svnmod=kommute
+svn export $svntrunk $svnmod
+
+# make source package
+tar zcf kommute-${VERSION}.tar.gz kommute
+
+# make rpm package
+sed "s/^Version:.*/Version: $MAJVERSION.$MINVERSION/;s/^Release:.*/Release: $RELEASE/" kommute.spec >kommute-${VERSION}.spec
+
+mkdir ./rpm
+mkdir ./rpm/SPECS
+mkdir ./rpm/SOURCES
+mkdir ./rpm/BUILD
+mkdir ./rpm/RPMS
+mkdir ./rpm/RPMS/i386
+mkdir ./rpm/SRPMS
+mv ~/.rpmmacros ~/.rpmmacros.old
+echo "%_topdir $CURDIR/rpm" >~/.rpmmacros
+
+cp -p kommute-${VERSION}.tar.gz ./rpm/SOURCES
+
+cp -p kommute-${VERSION}.spec ./rpm/SPECS
+rpmbuild -ba ./rpm/SPECS/kommute-${VERSION}.spec
+cp -p rpm/SRPMS/kommute-${VERSION}.src.rpm .
+cp -p rpm/RPMS/i386/kommute-${VERSION}.i386.rpm .
+
+# make debian package
+# needs dpkg and debhelper
+fakeroot alien -d kommute-${VERSION}.i386.rpm
+mv ~/.rpmmacros.old ~/.rpmmacros
+

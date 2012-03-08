@@ -1,0 +1,494 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>SearchResultsView</class>
+ <widget class="QWidget" name="SearchResultsView">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>582</width>
+    <height>327</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Form</string>
+  </property>
+  <property name="windowIcon">
+   <iconset resource="resources.qrc">
+    <normaloff>:/resources/cancel.png</normaloff>:/resources/cancel.png</iconset>
+  </property>
+  <layout class="QGridLayout" name="gridLayout_4">
+   <property name="margin">
+    <number>0</number>
+   </property>
+   <property name="spacing">
+    <number>0</number>
+   </property>
+   <item row="0" column="0">
+    <widget class="QFrame" name="frame">
+     <property name="sizePolicy">
+      <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+       <horstretch>0</horstretch>
+       <verstretch>0</verstretch>
+      </sizepolicy>
+     </property>
+     <property name="minimumSize">
+      <size>
+       <width>0</width>
+       <height>0</height>
+      </size>
+     </property>
+     <property name="maximumSize">
+      <size>
+       <width>16777215</width>
+       <height>119</height>
+      </size>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QFrame#frame { 
+background-color: #C3D4E8;
+}</string>
+     </property>
+     <property name="frameShape">
+      <enum>QFrame::StyledPanel</enum>
+     </property>
+     <property name="frameShadow">
+      <enum>QFrame::Raised</enum>
+     </property>
+     <layout class="QGridLayout" name="gridLayout_2">
+      <property name="margin">
+       <number>0</number>
+      </property>
+      <item row="1" column="0" colspan="2">
+       <layout class="QGridLayout" name="gridLayout">
+        <property name="margin">
+         <number>6</number>
+        </property>
+        <item row="0" column="0">
+         <widget class="QLabel" name="regExLabel">
+          <property name="text">
+           <string>Key word:</string>
+          </property>
+         </widget>
+        </item>
+        <item row="0" column="1" colspan="3">
+         <widget class="QLineEdit" name="searchLine">
+          <property name="toolTip">
+           <string>type expression to filter</string>
+          </property>
+          <property name="whatsThis">
+           <string>Here you can enter a regular expression to filter the results. Example : &quot;mute|share&quot; will filter results with word mute or share inside the name.Example : &quot;mute.*hash&quot; will filter results containing mute, some characters and hash.</string>
+          </property>
+         </widget>
+        </item>
+        <item row="0" column="4">
+         <widget class="QPushButton" name="startSearch">
+          <property name="text">
+           <string>Start Search</string>
+          </property>
+         </widget>
+        </item>
+        <item row="1" column="0">
+         <widget class="QLabel" name="minSizeLabel">
+          <property name="text">
+           <string>Mininum size :</string>
+          </property>
+         </widget>
+        </item>
+        <item row="1" column="1">
+         <widget class="QLineEdit" name="minSizeLine"/>
+        </item>
+        <item row="1" column="2">
+         <widget class="QLabel" name="maxSizeLabel">
+          <property name="text">
+           <string>Maximum size :</string>
+          </property>
+         </widget>
+        </item>
+        <item row="1" column="3">
+         <widget class="QLineEdit" name="maxSizeLine"/>
+        </item>
+        <item row="1" column="4">
+         <widget class="QPushButton" name="stopSearch">
+          <property name="text">
+           <string>Stop Search</string>
+          </property>
+         </widget>
+        </item>
+        <item row="2" column="0">
+         <widget class="QLabel" name="sourceNumLabel">
+          <property name="text">
+           <string>Sources :</string>
+          </property>
+         </widget>
+        </item>
+        <item row="2" column="1">
+         <widget class="QLineEdit" name="sourceNumLine"/>
+        </item>
+        <item row="2" column="2">
+         <widget class="QLabel" name="fileTypeLabel">
+          <property name="text">
+           <string>File type :</string>
+          </property>
+         </widget>
+        </item>
+        <item row="2" column="3">
+         <widget class="QComboBox" name="fileTypeCombo"/>
+        </item>
+        <item row="2" column="4">
+         <widget class="QPushButton" name="clearfilter_Button">
+          <property name="sizePolicy">
+           <sizepolicy hsizetype="Minimum" vsizetype="Expanding">
+            <horstretch>0</horstretch>
+            <verstretch>0</verstretch>
+           </sizepolicy>
+          </property>
+          <property name="minimumSize">
+           <size>
+            <width>16</width>
+            <height>16</height>
+           </size>
+          </property>
+          <property name="maximumSize">
+           <size>
+            <width>164</width>
+            <height>166</height>
+           </size>
+          </property>
+          <property name="toolTip">
+           <string>Clear Filter</string>
+          </property>
+          <property name="whatsThis">
+           <string>click on this button to clear your filter.</string>
+          </property>
+          <property name="styleSheet">
+           <string notr="true"/>
+          </property>
+          <property name="text">
+           <string>Clear</string>
+          </property>
+          <property name="flat">
+           <bool>false</bool>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </item>
+      <item row="1" column="2">
+       <spacer name="horizontalSpacer">
+        <property name="orientation">
+         <enum>Qt::Horizontal</enum>
+        </property>
+        <property name="sizeHint" stdset="0">
+         <size>
+          <width>40</width>
+          <height>20</height>
+         </size>
+        </property>
+       </spacer>
+      </item>
+      <item row="0" column="0" colspan="3">
+       <widget class="QToolButton" name="toolButtonSearchFilterOptions">
+        <property name="sizePolicy">
+         <sizepolicy hsizetype="Expanding" vsizetype="Fixed">
+          <horstretch>0</horstretch>
+          <verstretch>0</verstretch>
+         </sizepolicy>
+        </property>
+        <property name="font">
+         <font>
+          <pointsize>12</pointsize>
+          <weight>75</weight>
+          <bold>true</bold>
+         </font>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">QToolButton { 
+background-color: qlineargradient(x1:0, y1:0, x2:0, y2:1,
+stop:0 #C3D4E8, stop:1 #ECF9FB);
+
+border: none;
+}
+
+QToolButton:hover {
+background-color: #AFBED0;
+}</string>
+        </property>
+        <property name="text">
+         <string>Search Filter Options</string>
+        </property>
+        <property name="icon">
+         <iconset resource="resources.qrc">
+          <normaloff>:/resources/filter.png</normaloff>:/resources/filter.png</iconset>
+        </property>
+        <property name="checkable">
+         <bool>true</bool>
+        </property>
+        <property name="checked">
+         <bool>true</bool>
+        </property>
+        <property name="toolButtonStyle">
+         <enum>Qt::ToolButtonTextBesideIcon</enum>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </widget>
+   </item>
+   <item row="1" column="0">
+    <widget class="QFrame" name="frame_2">
+     <property name="frameShape">
+      <enum>QFrame::StyledPanel</enum>
+     </property>
+     <property name="frameShadow">
+      <enum>QFrame::Raised</enum>
+     </property>
+     <layout class="QGridLayout" name="gridLayout_3">
+      <property name="margin">
+       <number>6</number>
+      </property>
+      <item row="0" column="0">
+       <widget class="SearchResultsTable" name="searchtreeView">
+        <property name="contextMenuPolicy">
+         <enum>Qt::DefaultContextMenu</enum>
+        </property>
+        <property name="whatsThis">
+         <string>here are the results for your search.</string>
+        </property>
+        <property name="selectionMode">
+         <enum>QAbstractItemView::ExtendedSelection</enum>
+        </property>
+        <property name="iconSize">
+         <size>
+          <width>18</width>
+          <height>18</height>
+         </size>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </widget>
+   </item>
+  </layout>
+ </widget>
+ <customwidgets>
+  <customwidget>
+   <class>SearchResultsTable</class>
+   <extends>QTreeView</extends>
+   <header>searchresultstable.h</header>
+  </customwidget>
+ </customwidgets>
+ <resources>
+  <include location="resources.qrc"/>
+ </resources>
+ <connections>
+  <connection>
+   <sender>toolButtonSearchFilterOptions</sender>
+   <signal>toggled(bool)</signal>
+   <receiver>regExLabel</receiver>
+   <slot>setVisible(bool)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>290</x>
+     <y>12</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>39</x>
+     <y>46</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>toolButtonSearchFilterOptions</sender>
+   <signal>toggled(bool)</signal>
+   <receiver>maxSizeLabel</receiver>
+   <slot>setVisible(bool)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>290</x>
+     <y>12</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>253</x>
+     <y>74</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>toolButtonSearchFilterOptions</sender>
+   <signal>toggled(bool)</signal>
+   <receiver>minSizeLabel</receiver>
+   <slot>setVisible(bool)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>290</x>
+     <y>12</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>39</x>
+     <y>74</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>toolButtonSearchFilterOptions</sender>
+   <signal>toggled(bool)</signal>
+   <receiver>maxSizeLine</receiver>
+   <slot>setVisible(bool)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>290</x>
+     <y>12</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>362</x>
+     <y>74</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>toolButtonSearchFilterOptions</sender>
+   <signal>toggled(bool)</signal>
+   <receiver>minSizeLine</receiver>
+   <slot>setVisible(bool)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>290</x>
+     <y>12</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>145</x>
+     <y>74</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>toolButtonSearchFilterOptions</sender>
+   <signal>toggled(bool)</signal>
+   <receiver>searchLine</receiver>
+   <slot>setVisible(bool)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>290</x>
+     <y>12</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>253</x>
+     <y>46</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>toolButtonSearchFilterOptions</sender>
+   <signal>toggled(bool)</signal>
+   <receiver>sourceNumLabel</receiver>
+   <slot>setVisible(bool)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>290</x>
+     <y>12</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>39</x>
+     <y>101</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>toolButtonSearchFilterOptions</sender>
+   <signal>toggled(bool)</signal>
+   <receiver>sourceNumLine</receiver>
+   <slot>setVisible(bool)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>290</x>
+     <y>12</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>145</x>
+     <y>101</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>toolButtonSearchFilterOptions</sender>
+   <signal>toggled(bool)</signal>
+   <receiver>startSearch</receiver>
+   <slot>setVisible(bool)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>290</x>
+     <y>12</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>472</x>
+     <y>46</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>toolButtonSearchFilterOptions</sender>
+   <signal>toggled(bool)</signal>
+   <receiver>stopSearch</receiver>
+   <slot>setVisible(bool)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>290</x>
+     <y>12</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>472</x>
+     <y>74</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>toolButtonSearchFilterOptions</sender>
+   <signal>toggled(bool)</signal>
+   <receiver>fileTypeCombo</receiver>
+   <slot>setVisible(bool)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>290</x>
+     <y>12</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>362</x>
+     <y>101</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>toolButtonSearchFilterOptions</sender>
+   <signal>toggled(bool)</signal>
+   <receiver>fileTypeLabel</receiver>
+   <slot>setVisible(bool)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>290</x>
+     <y>12</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>253</x>
+     <y>101</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>toolButtonSearchFilterOptions</sender>
+   <signal>toggled(bool)</signal>
+   <receiver>clearfilter_Button</receiver>
+   <slot>setVisible(bool)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>290</x>
+     <y>12</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>472</x>
+     <y>101</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
+</ui>

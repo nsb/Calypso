@@ -1,0 +1,9 @@
+[Desktop Entry]
+Encoding=UTF-8
+Name=Kommute
+Exec=kommute
+Icon=hi16-app-kommute.png
+Type=Application
+Categories=Internet;X-MandrivaLinux-Internet-FileTransfer;Qt;KDE;Utility;Applications
+Comment=File Sharing Application
+Comment[fr]=Partage de fichiers P2P sécurisé

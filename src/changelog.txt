@@ -1,0 +1,241 @@
+0.24:
+
+* hosts management improved : collect some statistics and use preferentially hosts we have already contacted.
+* added proxy settings.
+* added port setting in setup wizard.
+* bug 2649300 corrected : downloaded size and complete download time was sometimes broken.
+
+0.23:
+
+* added detection of new releases.
+* added more sources colors in Search
+* fixed when clearing Filter setFocus the LineEdit
+* fixed by default hide the clear Filter Button
+* redesign the Shared Files Filter
+* added feature to hide clear Filter Button when Filter Text is Empty 
+* added possibility to put config file in a custom directory (kommute -s /xxx or kommute -s ./xxx)
+
+0.22:
+* added chunk cache for better anonimity.
+* added to Comments view to show the kommute link for each file.
+* fixed to not stretch Details view  when the File name is big.
+* added Details View for Downloads
+
+O.21:
+* added received/emitted to stats treewidget
+* corrected bug : Max simultaneous downloads was not applied.
+* Shared Files: Easy Sharing and Manage Folders
+* add a new setting in gui : log level.
+* post address to web caches is now compatible with Beacon Cache
+* added change connection icon when quedcount is bigger then 0 or 100
+* added color feature for statusbar too
+* hostlist exchange : send only hosts for which we have made a successfull connection.
+* translations updated
+* many other bug/fixes.
+
+0.20:
+* added key delete feature for Cancel Downloads
+* added dutch translation
+* added removes of inactive sources.
+* bug corrected : crash under windows
+* bug corrected : files with size >4G were not displayed.
+* bug corrected in send chunk of partial files.
+
+0.19:
+* added enable multiple kommute link paste to download
+* fixed the bug that cancel selection file dialog from shared folder from "..." will set home dir as default, now it sets to empty.
+* fixed do not move complete file from incoming folder to shared folder automatically. 
+* added "open file" and "open folder" in context menu for shared files.
+* added chunks
+* fixed bug : kommute starting with big font.
+* added polish translation.
+* limit broadcast to ALL to 3 neighbors to avoid saturating the network.
+* minor improvements in client list management
+* italian translation updated
+* added russian translation
+* added dynamic language change.
+* set better layout with fixed size for Search Filter looks better.
+* added swedish translation.
+* added spanish translation.
+* added bosnian translation.
+* added chinese translation.
+* corrected bug in web cache reading.
+* added portuguese translation.
+
+0.18:
+* added clear filter button to shared files
+* fixed bug that incoming folder holds file with hash name. now real name shows out.
+* fixed bug that copy link from search research view cannot work
+* added paste kommute link implementation done. located in download context menu.
+* added stop a download file implementation.
+* correct original "cancel" download action, delete both hash file and incoming file.
+* correct original "clear" complete download action, that clear all download complete files from tree view.
+* added a QMutex in Download class.
+* updated default cache list.
+* fixed bug : exit on options ok click
+* limit number of results returned by cache.
+* corrected bug when using Use_Majority_Routing option
+* fixed don't respond to fileinforequest destined to ALL if we don't have this file.
+* added start minimized
+* added autostart with windows check
+* added a spacer in connection page.
+* cryptopp updated from 5.4 to 5.6.0
+* correct a crash at exit.
+* fixed close file when no more needed, to avoid to block the file.
+* correct bug on windows : temporary file was not deleted when download is complete.
+* rewrote a new AppLog class to log messages in log window
+* added download priority and column
+* added double click downloading file to pause, and vice versa.
+* give setter / getters for download class instead of public fields.
+* added priority high / normal / low / auto for downloading.
+* added functionality of pause / resume downloading thread.
+* added download link handling.
+* added Set the directories for incoming and temp from options. 
+* fixed bug: when there are not hosts to connect
+* added Filter for Shared Files
+* added FileType icons and Type column for Shared Files
+* added Context menu for remove a Shared Directorie
+* fixed functionality related to maximal number of allowed connections.
+
+0.17:
+* added advanced search filter (min. and max. size, sources, file type)
+* added a cache for search results.
+* added Type column item in search results view to show the File Type as Text
+* added File Type icons for File Name extensions in search results view
+* save known hosts at exit in SeedHosts setting
+* correct bug in search results view : the colors were on bad rows.
+* added functions in order to disable WebHostCaches, sending/receiving Seed List to/from other hosts
+* added plugins feature
+
+0.16:
+* increase size buffer for hashing and allow more CPU for hashing.
+* replaced MessagePerSecondLimiter with KbLimiter.
+* added start time in statistics
+* change display of uptime in statistics.
+* disabled saving shares while downloading them.(avoid to truncate hashes)
+* added a button to suppress additionnal shares.
+* save and restore customized colors.
+
+0.15:
+* add other shared paths
+* fix some problems causing unnecessary rehashs.
+* add a random sleep time in downloads to avoid to send too many messages at connection
+
+0.14:
+* rewrote download process.
+* added swarming
+* answer to file hash request with incomplete files.
+* include all MUTE sources in kommute tree.
+
+0.13:
+* add context menu "Add Host" in Connection Page.
+* correct bug when clearing more than one donload at a time.
+* better stop for downloads when quitting.
+* avoid infinite lock in message treatment.
+* limit some timeouts to 5 minutes.
+* better stop for hash thread
+* use hash for name of partial file, because thre is often two files with same
+name.
+* avoid to display results with (null) hash. 
+* don't redisplay same file from same host in results
+* added for stylesheet preview icons , its show in stylesheet combobox,
+* some statistics computed : tot bytes downloaded, tot bytes uploaded, uptime.
+* display this statistics in treeview and in graph.
+* name of partial files is now hash+extension, because two different files can
+have same name.
+
+0.12:
+* reactivated multiselection on downloads.
+* corrected many memory corruption and memory leaks.
+  kommute should be more stable and less memory consumer.
+* changes in look for connexions
+* added turkish language
+
+0.11:
+* many look changes :
+  * use of stackedpages to have a more modern look.
+  * added shared files tab
+  * changes in progress bar
+  * added downloads/uploads iconlabel
+  * added a log viewer
+  * ......
+* fix sort by size in search results.
+* correct bug in Handler for fileChunk, causing probably some crashes
+or freezes.
+* same bug in Handler for FileInfo.
+* added an option to see downloads ad search results on same page
+* fix bug allowing to start same file many times.
+
+0.10-2:
+* restore icon for connections tab
+* correct bug in filter
+* added done column in downloads view
+* added french language for windows installer
+
+0.10:
+* resize some columns for best look.
+* added style and style sheet in settings.
+* added tyle shhets coffee, pagefold, blue, silver, tb1.
+* added new button for settings.
+* added windows .ico file.
+* added context menu separators.
+* added icons in context menus.
+* added one click tray restore.
+* change icon for search button.
+* changed QTableViews to QTreeviews for better look.
+* many changes in donwnloads list :
+   * split progression column in a speed column, a progression bar, and a completed column.
+   * added column with an icon to show download's state.
+   * added column remaining
+   * terminated downloads are in green.
+* allow sort in upload list
+* add kommute version to main window title
+* windows installer script improvements :
+   * now multilanguage
+   * modern interface
+   * changelog viewable after install
+   * can run kommute after install
+   * added desktop shortcut
+   * added Quicklaunchbar shortcut
+
+
+0.9:
+* bug corrected : don't download when space in sharing path.
+* Relative paths for filenames in upload box
+* multiple selects in search results
+* multiple selects in downloads view
+
+0.8:
+* rewrote the hash management. CPU an disk usage is greatly reduced.
+* correct display of utf8 strings in search results.
+* correct cancel/erase of download : don't block the display.
+
+0.7:
+* bug corrected in parameter behindFirewall (false/true should be 0/1). Now
+kommute clients can  be registered on mute web caches.
+* button close in "about" now work.
+* add random in utility for better anonymity.
+* bug in download speed.
+* replaced toLatin1 with toLocal8Bit (bug with accentued chars)
+* downloads with status "file not found" are restarted after 5 minutes.
+
+0.6 :
+* Now load 10 chunks simultaneously over different sources : kommute is now
+fully multisources.
+* Hashes are computed in a separate thread, with a CPU limited to 25%.
+
+0.5 :
+* bug in windows installer (mingwm10.dll)
+* "grab friend" context menu on uploads.
+* "grab friend" context menu on downloads.
+* help in french language.
+* bug : display was mixed when downloads was sorted.
+* bug in download speed.
+
+0.4 :
+* display number of filtered results.
+* bug in RSA Key Size corrected.
+* bug in save file process corrected (caused data corruption)
+
+0.3 :
+port to QT4.

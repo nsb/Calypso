@@ -1,0 +1,3 @@
+#include "kommute_win.rc.h"
+
+IDI_ICON1               ICON    "resources/kommute.ico"

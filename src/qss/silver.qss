@@ -1,0 +1,13 @@
+
+/* Customize the toolbar. */
+QToolBar {
+    border-image: url(:qss/silver/silver.png);
+
+}
+
+/* Customize the toolbar. */
+QStatusBar {
+    border-image: url(:qss/silver/silver.png);
+
+}
+

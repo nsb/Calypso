@@ -1,0 +1,122 @@
+.QWidget {
+   background-color: qlineargradient(x1:0, y1:0, x2:0, y2:1,
+                                       stop:0 #FEFEFE, stop:1 #F4F4F4);
+ }
+
+QMenuBar {
+   color: white;
+   background-color: qlineargradient(x1:0, y1:0, x2:0, y2:1,
+                                       stop:0 #080808, stop:1 #414141);
+ }
+
+QFileMenu {
+      color: white;
+
+}
+
+
+/* Customize the toolbar. */
+QToolBar {
+    color: white;
+    border-image: url(:qss/black/backgroundblack-2.png);
+
+}
+
+QToolButton {
+      color: white;
+}
+
+QPushButton {
+      color: white;
+	min-height: 22px;
+	min-width: 75px;
+}
+
+
+QPushButton#btnReset#btnReset2 {
+      color: white;
+	min-height: 25px;
+      min-width: 75px;
+}
+
+QPushButton
+{
+border-image: url(:qss/black/button.png) ;
+}
+
+QPushButton:hover 
+{
+border-image: url(:qss/black/button_hover.png);
+}
+
+QPushButton:pressed 
+{
+border-image: url(:qss/black/button_pressed.png) ;
+} 
+
+
+QSplitter
+{
+background-color: #F9F9F9;
+}
+
+QLineEdit
+{
+border-image: url(:qss/black/border.png) 4;
+border-width: 3;
+}
+
+QLabel
+{
+color: #306090;
+}
+
+
+QGroupBox
+{
+color: #306090;
+font: bold;
+}
+
+
+QRadioButton::indicator::unchecked {
+    image: url(:qss/black/checkBox.png);
+}
+
+QRadioButton::indicator:unchecked:hover {
+    image: url(:qss/black/checkBox_hover.png);
+}
+
+
+
+QRadioButton::indicator::checked {
+    image: url(:qss/black/checkBox_selected.png);
+}
+
+QRadioButton::indicator:checked:hover {
+    image: url(:qss/black/checkBox_hoverAndSelected.png);
+}
+
+
+QCheckBox::indicator:unchecked {
+    image: url(:qss/black/checkBox.png);
+}
+
+QCheckBox::indicator:unchecked:hover {
+    image: url(:qss/black/checkBox_hover.png);
+}
+
+
+QCheckBox::indicator:checked {
+    image: url(:qss/black/checkBox_selected.png);
+}
+
+QCheckBox::indicator:checked:hover {
+    image: url(:qss/black/checkBox_hoverAndSelected.png);
+}
+
+/* Customize the toolbar. */
+QStatusBar {
+   background-color: qlineargradient(x1:0, y1:0, x2:0, y2:1,
+                                       stop:0 #080808, stop:1 #414141);
+}

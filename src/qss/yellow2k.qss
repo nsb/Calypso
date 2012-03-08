@@ -1,0 +1,1 @@
+.QWidget {   background-color: #FFD000;}QMenuBar {   background-color: #FFD000;}/* Customize the toolbar. */QToolBar {    border-image: url(:qss/yellow2k/yellow2k.png);}QStatusBar {    border-image: url(:qss/yellow2k/yellow2k.png);}

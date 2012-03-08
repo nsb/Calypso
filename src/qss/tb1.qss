@@ -1,0 +1,18 @@
+
+/* Customize the toolbar. */
+QToolBar {
+    border-image: url(:qss/tb1/tb1.png);
+
+}
+
+
+
+QToolButton {
+      color: #01025C;
+}
+
+QLabel
+{
+color: #01025C;
+}
+
