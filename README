@@ -1,0 +1,9 @@
+=======
+Calypso
+=======
+
+Calypso is a cross platfrom file sharing client using the anonymous network MUTE.
+I started the project in 2005 and it has been downloaded more than 160.000 times and translated in to more than 10 languages.
+It is a multithreaded application written in C++ using Qt.
+
+You can find the project page here: http://calypso.sourceforge.net
